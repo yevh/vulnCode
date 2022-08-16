@@ -1,0 +1,14 @@
+name: SCA scan
+on: push
+jobs:
+  synchronous-analysis-with-blocking-result:
+    name: SOOS.io
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Run SOOS - Scan for vulnerabilities
+      uses: soos-io/soos-sca-github-action@v1.2.0
+      with:
+        project_name: "vulnCode"
+        client_id: ${{ secrets.SOOS_CLIENT_ID }}
+        api_key: ${{ secrets.SOOS_API_KEY }}
