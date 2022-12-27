@@ -1,0 +1,14 @@
+name: zap-full-security-scan
+on:
+  schedule:
+    # Runs every day At 00:12
+    - cron:  '10 00 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:     
+    - name: OWASP ZAP Full Scan
+      uses: zaproxy/action-full-scan@v0.1.0
+      with:
+        target: "https://techconnectweb.azurewebsites.net/"
