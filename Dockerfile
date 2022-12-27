@@ -1,13 +1,21 @@
-# Damn Vulnerable NodeJS Application
+FROM node:14.18-stretch
 
-FROM node:carbon
-LABEL MAINTAINER "Subash SN"
+COPY package-lock.json package.json  /app/
 
 WORKDIR /app
 
-COPY . .
+RUN npm install
 
-RUN chmod +x /app/entrypoint.sh \
-	&& npm install
+COPY .babelrc \
+    .eslintrc.yml \
+    .nvmrc \
+    postcss.config.js \
+    webpack.common.js \
+    webpack.dev.js \
+    webpack.prod.js /app/
+    
+COPY site/ /app/site
+COPY src/ /app/src
 
-CMD ["bash", "/app/entrypoint.sh"]
+RUN npm run build
+CMD npm run preview
