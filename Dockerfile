@@ -1,10 +1,5 @@
 FROM node:14.18-stretch
 
-RUN addgroup --system <group>
-RUN adduser --system <user> --ingroup <group>
-USER <user>:<group>
-
-
 COPY package-lock.json package.json  /app/
 
 WORKDIR /app
