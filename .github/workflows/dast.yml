@@ -1,7 +1,7 @@
 on:
   schedule:
     # Runs every day At 01:00.
-    - cron:  '23:25'
+    - cron:  '23:30:00'
 
 steps:
   - name: ZAP Scan
