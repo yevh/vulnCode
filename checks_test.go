@@ -1,0 +1,1 @@
+\t\t\"aws_secret= \\\"QKNNQEQIMNOJJEUWOWFDXXXE4OA\\\
