@@ -19,7 +19,7 @@ app.use(fileUpload());
 // Enable for Reverse proxy support
 // app.set('trust proxy', 1) 
 
-// Intialize Session
+// Intialize Sessiondsa
 app.use(session({
   secret: 'keyboard cat',
   resave: true,
