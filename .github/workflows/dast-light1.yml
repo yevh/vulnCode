@@ -11,4 +11,4 @@ jobs:
         uses: zaproxy/action-baseline@7cea08522cd386f6c675776d5e4296aecf61f33b
         with:
           # Target URL
-          target: "http://evil.com"
+          target: "http://testphp.vulnweb.com/"
