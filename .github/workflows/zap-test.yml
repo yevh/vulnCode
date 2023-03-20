@@ -1,0 +1,41 @@
+name: OWASP ZAP Baseline Scan
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: OWASP ZAP Baseline Scan
+        uses: zaproxy/action-baseline@7cea08522cd386f6c675776d5e4296aecf61f33b
+        with:
+          target: "http://testphp.vulnweb.com/"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Report results
+        if: always()
+        uses: dawidd6/action-check-run@v2.5.0
+        with:
+          name: OWASP ZAP Baseline Scan
+          conclusion: ${{ job.status }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          status: completed
+          title: OWASP ZAP Baseline Scan
+          summary: |
+            The OWASP ZAP Baseline Scan completed.
+          annotations: ${{ steps.report.outputs.annotations }}
+    
+      - name: Parse results
+        id: report
+        if: always()
+        run: |
+          REPORT=$(cat zap/baseline_report.html | sed 's/"/\\"/g')
+          ANNOTATIONS=$(curl --silent --request POST --header "Content-Type: application/json" --header "Accept: application/json" --data "{\"type\":\"zap\", \"report\":\"$REPORT\"}" "https://webhooks.dawid.app/zap/")
+          echo "::set-output name=annotations::$ANNOTATIONS"
