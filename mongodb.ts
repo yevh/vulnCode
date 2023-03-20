@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.
- * SPDX-License-Identifier: MIT
+ * SPDX-License-Identifier: MITdsad
  */
 
 // @ts-expect-error due to non-existing type definitions for MarsDB
