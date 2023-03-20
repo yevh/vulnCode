@@ -7,7 +7,7 @@ var morgan = require('morgan')
 const fileUpload = require('express-fileupload');
 var config = require('./config/server')
 
-//Initialize Express
+//Initialize Expressdsa
 var app = express()
 require('./core/passport')(passport)
 app.use(express.static('public'))
