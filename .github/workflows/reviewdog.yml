@@ -8,4 +8,5 @@ jobs:
     - name: reviewdog
       uses: reviewdog/action-detect-secrets@2c14c1ff638516f39eeb97a927f95d28d9dbb62d #v0.11.4
       with:
-        reporter: github-pr-review 
+        reporter: github-pr-review
+        fail-on-error: true
