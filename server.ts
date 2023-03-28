@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.
+ * Copyright (c) 2014-2022 Bjoern Kimminich & the OWASP Juice Shop contributors.dsadsa
  * SPDX-License-Identifier: MIT
  */
 import dataErasure from './routes/dataErasure'
