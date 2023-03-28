@@ -1,4 +1,4 @@
-name: ContainerSecurity
+name: Container Security
 on:
   push:
     branches:
