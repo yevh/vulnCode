@@ -13,4 +13,4 @@ jobs:
       - name: 'Dependency Review'
         uses: actions/dependency-review-action@c090f4e553673e6e505ea70d6a95362ee12adb94 #v3.0.3
         with:
-          fail-on-severity: critical
+          fail-on-severity: high
