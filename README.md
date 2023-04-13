@@ -8,7 +8,7 @@ The application is powered by commonly used libraries such as [express](https://
 
 ## Developer Security Guide book
 
-The application comes with a **developer friendly comprehensive guidebook** which can be used to learn, avoid and fix the vulnerabilities. The guide available at https://appsecco.com/books/dvna-developers-security-guide/ covers the following
+The application comes with a **developer friendly comprehensive guidebook** which can be used to learn, avoid and fix the vulnerabilities. The guide available at https://appsecco.com/books/dvna-developers-security-guide/ covers the followingds
 
 1. Instructions for setting up DVNA
 2. Instructions on exploiting the vulnerabilities
