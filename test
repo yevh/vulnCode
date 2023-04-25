@@ -1,0 +1,7 @@
+variables:
+  ADDITIONAL_CA_CERT_BUNDLE: |
+      -----BEGIN CERTIFICATE-----
+      MIIGqTCCBJGgAwIBAgIQI7AVxxVwg2kch4d56XNdDjANBgkqhkiG9w0BAQsFADCB
+      ...
+      jWgmPqF3vUbZE0EyScetPJquRFRKIesyJuBFMAs=
+      -----END CERTIFICATE-----
