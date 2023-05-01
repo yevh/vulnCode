@@ -1,0 +1,11 @@
+version: 2
+updates:
+  # Enable updates for any package ecosystem detected
+  - package-ecosystem: "auto"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "your-github-username"
+    versioning-strategy: "auto"
