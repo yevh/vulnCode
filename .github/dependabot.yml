@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # Enable updates for npm dependencies (JavaScript)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "yevh"
+    versioning-strategy: "auto"
+
+  # Enable updates for pip dependencies (Python)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+
+  # Add more package ecosystems as needed...
